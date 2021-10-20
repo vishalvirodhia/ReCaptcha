@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13DFFCBF2720380D0057E333 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13DFFCBE2720380D0057E333 /* RxSwift */; };
 		F206BAB51F8D3DE900A25807 /* ReCaptcha-Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = F206BAB31F8D3DE900A25807 /* ReCaptcha-Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F206BB1D1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = F206BB1B1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F206BB221F8D4DDF00A25807 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F206BB121F8D4D1400A25807 /* RxSwift.framework */; };
 		F231B39A1FEC51C800F82943 /* DispatchQueue+Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F231B3991FEC51C800F82943 /* DispatchQueue+Throttle.swift */; };
 		F24EA1E11F9683FB001DEC17 /* ReCaptcha+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1DD1F9683F5001DEC17 /* ReCaptcha+Rx.swift */; };
 		F24EA1E21F968403001DEC17 /* ReCaptchaDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1D81F9683F5001DEC17 /* ReCaptchaDecoder.swift */; };
@@ -31,12 +31,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		13DFFCBC272037320057E333 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		13DFFCBD272037F40057E333 /* RxSwift */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RxSwift; path = Carthage/Checkouts/RxSwift; sourceTree = "<group>"; };
 		F206BAB01F8D3DE900A25807 /* ReCaptcha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReCaptcha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F206BAB31F8D3DE900A25807 /* ReCaptcha-Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReCaptcha-Carthage.h"; sourceTree = "<group>"; };
 		F206BAB41F8D3DE900A25807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F206BACF1F8D3E2800A25807 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		F206BB121F8D4D1400A25807 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		F206BB191F8D4DBC00A25807 /* ReCaptcha_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReCaptcha_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F206BB1B1F8D4DBC00A25807 /* ReCaptcha_RxSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReCaptcha_RxSwift.h; sourceTree = "<group>"; };
 		F206BB1C1F8D4DBC00A25807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F206BB221F8D4DDF00A25807 /* RxSwift.framework in Frameworks */,
+				13DFFCBF2720380D0057E333 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +117,7 @@
 		F206BAD11F8D3E7600A25807 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F206BB121F8D4D1400A25807 /* RxSwift.framework */,
+				13DFFCBD272037F40057E333 /* RxSwift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 				F206BB151F8D4DBC00A25807 /* Frameworks */,
 				F206BB161F8D4DBC00A25807 /* Headers */,
 				F206BB171F8D4DBC00A25807 /* Resources */,
+				13DFFCBC272037320057E333 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +234,9 @@
 				F206BB241F8D4DF800A25807 /* PBXTargetDependency */,
 			);
 			name = ReCaptcha_RxSwift;
+			packageProductDependencies = (
+				13DFFCBE2720380D0057E333 /* RxSwift */,
+			);
 			productName = ReCaptcha_RxSwift;
 			productReference = F206BB191F8D4DBC00A25807 /* ReCaptcha_RxSwift.framework */;
 			productType = "com.apple.product-type.framework";
@@ -230,7 +247,7 @@
 		F206BAA71F8D3DE900A25807 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Flávio Caetano";
 				TargetAttributes = {
 					F206BAAF1F8D3DE900A25807 = {
@@ -245,11 +262,11 @@
 			};
 			buildConfigurationList = F206BAAA1F8D3DE900A25807 /* Build configuration list for PBXProject "ReCaptcha-Carthage" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = F206BAA61F8D3DE900A25807;
 			productRefGroup = F206BAB11F8D3DE900A25807 /* Products */;
@@ -318,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -328,6 +346,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -335,8 +354,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -362,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -379,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -389,6 +411,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -396,8 +419,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -417,10 +442,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -443,8 +469,12 @@
 				);
 				INFOPLIST_FILE = "ReCaptcha-Carthage/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocaetano.ReCaptcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -466,8 +496,12 @@
 				);
 				INFOPLIST_FILE = "ReCaptcha-Carthage/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaviocaetano.ReCaptcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -490,8 +524,12 @@
 				);
 				INFOPLIST_FILE = ReCaptcha_RxSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "-D IMPORT_RECAPTCHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flaviocaetano.ReCaptcha-RxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,8 +553,12 @@
 				);
 				INFOPLIST_FILE = ReCaptcha_RxSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "-D IMPORT_RECAPTCHA";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flaviocaetano.ReCaptcha-RxSwift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +598,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13DFFCBE2720380D0057E333 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F206BAA71F8D3DE900A25807 /* Project object */;
 }
